@@ -2,17 +2,17 @@ var expect = require('chai').expect;
 
 (typeof window === 'undefined' ? describe : describe.skip)('UVM allowed globals', function () {
     var testrun,
-        globals = ['isNaN', 'SyntaxError', 'ArrayBuffer', 'JSON', 'unescape', 'URIError', 'TypeError', 'WeakSet',
-            'Array', 'parseFloat', 'EvalError', 'parseInt', 'Error', 'Object', 'Int16Array',
-            'NaN', 'Uint8ClampedArray', 'Uint32Array', 'Date', 'ReferenceError', 'Proxy', 'Reflect',
-            'Uint16Array', 'Int8Array', 'Boolean', 'RangeError', 'isFinite', 'encodeURIComponent', 'encodeURI',
-            'decodeURI', 'String', 'undefined', 'Symbol', 'Set', 'WeakMap', 'Math', 'DataView', 'Int32Array',
-            'Function', 'Number', 'Infinity', 'Promise', 'Float64Array', 'Float32Array', 'Map', 'RegExp',
-            'decodeURIComponent', 'escape', 'Uint8Array', 'globals', 'environment', 'data',
-            'iteration', 'request', 'responseCookies', 'responseBody', 'responseCode', 'responseHeaders',
-            'responseTime', 'tests', '_', 'CryptoJS', 'tv4', 'cheerio', 'Backbone', 'atob', 'btoa', 'Buffer',
-            'xml2Json', 'postman', 'setTimeout', 'setInterval', 'setImmediate', 'clearTimeout', 'clearInterval',
-            'clearImmediate', 'console', 'pm'];
+        globals = ['isNaN', 'SyntaxError', 'ArrayBuffer', 'Atomics', 'JSON', 'unescape', 'URIError', 'TypeError',
+            'WeakSet', 'Array', 'parseFloat', 'EvalError', 'parseInt', 'Error', 'Object', 'Int16Array', 'NaN',
+            'Uint8ClampedArray', 'Uint32Array', 'Date', 'ReferenceError', 'Proxy', 'Reflect', 'Uint16Array',
+            'Int8Array', 'Boolean', 'RangeError', 'isFinite', 'encodeURIComponent', 'encodeURI', 'decodeURI', 'String',
+            'undefined', 'Symbol', 'Set', 'SharedArrayBuffer', 'WeakMap', 'Math', 'DataView', 'Int32Array', 'Function',
+            'Number', 'Infinity', 'Promise', 'Float64Array', 'Float32Array', 'Map', 'RegExp', 'decodeURIComponent',
+            'escape', 'Uint8Array', 'globals', 'environment', 'data', 'iteration', 'request', 'responseCookies',
+            'responseBody', 'responseCode', 'responseHeaders', 'responseTime', 'tests', '_', 'CryptoJS', 'tv4',
+            'cheerio', 'Backbone', 'BigInt', 'BigInt64Array', 'BigUint64Array', 'atob', 'btoa', 'Buffer', 'xml2Json',
+            'postman', 'setTimeout', 'setInterval', 'setImmediate', 'clearTimeout', 'clearInterval', 'clearImmediate',
+            'console', 'pm'];
 
     if (typeof window !== 'undefined') {
         globals.push('XMLHttpRequest');
